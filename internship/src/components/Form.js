@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Box, Grid, Typography, FormControlLabel, FormControl, Radio, RadioGroup } from '@mui/material'
-import Input from './common/Input'
+import { Box, Grid, Typography } from '@mui/material'
 import StudentInfo from "./StudentInfo";
 import StajKurumu from "./StajKurumu";
 import Signature from "./Signature";
@@ -32,76 +31,42 @@ const Form = () => {
     return (
         <>
             <Box className='FormCard'>
-                <Grid container padding={2} direction='row' sx={{ bgcolor: 'red' }}>
+                <Grid container padding={2} direction='row'>
+                    <Grid item xs={12} marginBottom={1}>
+                        <div className="progressbar">
+                            <div
+                                style={{ width: page === 0 ? "33.3%" : page == 1 ? "66.6%" : "100%" }}>
+                            </div>
+                        </div>
+                    </Grid>
                     <Grid marginBottom={3} item xs={12}>
                         <Typography className='FormHeader'>
                             {FormTitles[page]}
                         </Typography>
                     </Grid>
-                    <Grid item xs={6} marginBottom={3}>
-                        <Input
-                            type='text'
-                            placeholder='İsim'
-                        />
-                    </Grid>
+                    {PageDisplay()}
                     <Grid item xs={6}>
-                        <Input
-                            type='text'
-                            placeholder='Soyisim'
-                        />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Input
-                            type='number'
-                            placeholder='Öğrenci No'
-                        />
-                    </Grid>
-                    <Grid item xs={6} marginBottom={3}>
-                        <Input
-                            type='text'
-                            placeholder='Bölüm Adı'
-                        />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Input
-                            type='text'
-                            placeholder='Program/Sınıf'
-                        />
-                    </Grid>
-                    <Grid item xs={6} marginBottom={3}>
-                        <Input
-                            type='number'
-                            placeholder='T.C Kimlik No:'
-                        />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Input
-                            type='email'
-                            placeholder='E-posta'
-                        />
-                    </Grid>
-                    <Grid item xs={6} marginBottom={6}>
-                        <Input
-                            type='number'
-                            placeholder='Telefon No:'
-                        />
-                    </Grid>
-                    <Grid item xs={12} marginBottom={2}>
-                        <FormControl className="signupModalRadio">
-                            <RadioGroup>
-                                <FormControlLabel value='1' control={<Radio />} label="Staj 1" />
-                                <FormControlLabel value='2' control={<Radio />} label="Staj 2" />
-                            </RadioGroup>
-                        </FormControl>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <button className='FormButton'>
-                            Prev
+                        <button
+                            disabled={page == 0}
+                            onClick={() => {
+                                setPage((currPage) => currPage - 1);
+                            }}
+                            className='FormButton'>
+                            Geri
                         </button>
                     </Grid>
                     <Grid item xs={6}>
-                        <button className='FormButton'>
-                            Next
+                        <button
+                            onClick={() => {
+                                if (page === FormTitles.length - 1) {
+                                    alert("FORM SUBMITTED");
+                                    console.log(formData);
+                                } else {
+                                    setPage((currPage) => currPage + 1);
+                                }
+                            }}
+                            className='FormButton'>
+                            {page === FormTitles.length - 1 ? "Tamamla" : "İleri"}
                         </button>
                     </Grid>
                 </Grid>
