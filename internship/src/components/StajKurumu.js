@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, FormControlLabel, FormControl, Radio, RadioGroup } from '@mui/material'
+import { Grid } from '@mui/material'
 import Input from './common/Input'
 
 const StajKurumu = () => {
