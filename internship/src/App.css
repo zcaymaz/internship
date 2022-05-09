@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.App {
+    background: rgb(177, 73, 73);
+    /* background: radial-gradient(circle,
+            rgb(0, 0, 0) 29%,
+            rgb(255, 255, 255) 54%,
+            rgb(255, 0, 0) 100%); */
+    width: 100vw;
+    height: 100vh;
+    place-items: center;
+    display: grid;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    font-family: montserrat, arial, verdana;
+}
+
+.FormCard {
+    width: 60%;
+    margin-bottom: 40px;
+    border-radius: 20px !important;
+    padding: 7px;
+    place-items: center;
+    text-align: center;
+    background-color: white;
+}
+
+.FormHeader {
+    font-size: 30px !important;
+    font-family: montserrat, arial, verdana !important;
+}
+
+.FormInput {
+    width: 80%;
+    height: 36px;
+    background: #FEFCFD;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 16px !important;
+    font-family: montserrat, arial, verdana !important;
+}
+
+.FormButton {
+    width: 40%;
+    height: 55px;
+    background: #FEFCFD;
+    border-radius: 10px;
+    font-size: 20px !important;
+    font-family: montserrat, arial, verdana !important;
+}
+
+.signupModalRadio {
+    font-size: 16px !important;
+    line-height: 19px !important;
+    color: #000 !important;
+}
