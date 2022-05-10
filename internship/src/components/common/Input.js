@@ -1,6 +1,7 @@
 import React from 'react'
+import { Input } from '@mui/material'
 
-const Input = (props) => {
+export const FormInput = (props) => {
     return (
         <>
             <input className='FormInput' type={props.type} placeholder={props.placeholder} text={props.text}/>
@@ -8,4 +9,17 @@ const Input = (props) => {
     )
 }
 
-export default Input
+export const MultilineInput = (props) => {
+    return (
+        <>
+            <Input
+            className='MultilineInput' 
+            multiline
+            rows={props.rows}
+            type={props.type} 
+            placeholder={props.placeholder} 
+            text={props.text}
+            />
+        </>
+    )
+}

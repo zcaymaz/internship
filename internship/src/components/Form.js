@@ -31,7 +31,7 @@ const Form = () => {
     return (
         <>
             <Box className='FormCard'>
-                <Grid container padding={2} direction='row'>
+                <Grid container spacing={2} padding={2} direction='row'>
                     <Grid item xs={12} marginBottom={1}>
                         <div className="progressbar">
                             <div

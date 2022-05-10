@@ -34,12 +34,24 @@ body {
 }
 
 .FormInput {
-    width: 80%;
+    width: 98.3%;
     height: 36px;
     background: #FEFCFD;
     border-radius: 10px;
     padding-left: 10px;
-    font-size: 16px !important;
+    font-size: 14px !important;
+    font-family: montserrat, arial, verdana !important;
+}
+
+.MultilineInput {
+    width: 100%;
+    height: 83px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.18)!important;
+    background: #FEFCFD;
+    border-radius: 10px !important;
+    padding-left: 10px !important;
+    font-size: 14px !important;
     font-family: montserrat, arial, verdana !important;
 }
 
