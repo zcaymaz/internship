@@ -7,14 +7,28 @@ import Signature from "./Signature";
 const Form = () => {
     const [page, setPage] = useState(0);
     const [formData, setFormData] = useState({
-        email: "",
-        password: "",
-        confirmPassword: "",
-        firstName: "",
-        lastName: "",
-        username: "",
-        nationality: "",
-        other: "",
+        studentname: "",
+        studentsurname: "",
+        studentno: "",
+        studentdepartment: "",
+        studentclass: "",
+        studenttcno: "",
+        studentmail: "",
+        studentgsmno: "",
+        staj:"",
+        corporationname: "",
+        corporationaddress: "",
+        corporationproduction: "",
+        corporationworkercount: "",
+        corporationpersonalitytcno: "",
+        corporationgsmno: "",
+        corporationfax: "",
+        corporationtaxno: "",
+        corporationtaxdepartment: "",
+        corporationauthorizedperson: "",
+        corporationwebaddress: "",
+        corporationmail: "",
+        corporationshef: "",
     });
 
     const FormTitles = ["Öğrenci Bilgileri", "Staj Yapılacak Kurum/Kuruluşun Bilgileri:", "İmzalar"];
@@ -30,16 +44,16 @@ const Form = () => {
     };
     return (
         <>
-            <Box className='FormCard'>
+            <Box sx={{width:{xs:'95%',sm:'85%',md:'80%',lg:'60%'}}} className='FormCard'>
                 <Grid container spacing={2} padding={2} direction='row'>
-                    <Grid item xs={12} marginBottom={1}>
+                    <Grid item xs={12} >
                         <div className="progressbar">
                             <div
-                                style={{ width: page === 0 ? "33.3%" : page == 1 ? "66.6%" : "100%" }}>
+                                style={{ width: page === 0 ? "33.3%" : page === 1 ? "66.6%" : "100%" }}>
                             </div>
                         </div>
                     </Grid>
-                    <Grid marginBottom={3} item xs={12}>
+                    <Grid item xs={12}>
                         <Typography className='FormHeader'>
                             {FormTitles[page]}
                         </Typography>
@@ -47,7 +61,7 @@ const Form = () => {
                     {PageDisplay()}
                     <Grid item xs={6}>
                         <button
-                            disabled={page == 0}
+                            disabled={page === 0}
                             onClick={() => {
                                 setPage((currPage) => currPage - 1);
                             }}

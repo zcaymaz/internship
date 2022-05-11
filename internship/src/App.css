@@ -6,7 +6,7 @@
             rgb(0, 0, 0) 29%,
             rgb(255, 255, 255) 54%,
             rgb(255, 0, 0) 100%); */
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     place-items: center;
     display: grid;
@@ -19,7 +19,6 @@ body {
 }
 
 .FormCard {
-    width: 60%;
     margin-bottom: 40px;
     border-radius: 20px !important;
     padding: 7px;
@@ -47,7 +46,19 @@ body {
     width: 100%;
     height: 83px;
     box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.18)!important;
+    border: 2px solid !important;
+    background: #FEFCFD;
+    border-radius: 10px !important;
+    padding-left: 10px !important;
+    font-size: 14px !important;
+    font-family: montserrat, arial, verdana !important;
+}
+
+.MultilineInput1 {
+    width: 100%;
+    height: 103px;
+    box-sizing: border-box;
+    border: 2px solid !important;
     background: #FEFCFD;
     border-radius: 10px !important;
     padding-left: 10px !important;
@@ -65,9 +76,11 @@ body {
 }
 
 .signupModalRadio {
-    font-size: 16px !important;
+    font-size: 13px !important;
     line-height: 19px !important;
     color: #000 !important;
+    border-radius: 10px;
+    width: 50%;
 }
 
 .progressbar {
@@ -101,4 +114,16 @@ body {
     font-family: montserrat, arial, verdana !important;
     font-weight: 700 !important;
     text-align: left;
+}
+
+.file-upload-drag-drop {
+    background: #fbfcff;
+    border: 1px dashed #979797;
+    box-sizing: border-box;
+    border-radius: 25px;
+    padding: 65px 30px 20px 30px;
+    text-align: center;
+    min-height: 250px;
+    cursor: pointer;
+    max-width: 250px;
 }
