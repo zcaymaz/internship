@@ -31,7 +31,7 @@ const Form = () => {
         corporationshef: "",
     });
 
-    const FormTitles = ["Öğrenci Bilgileri", "Staj Yapılacak Kurum/Kuruluşun Bilgileri:", "İmzalar"];
+    const FormTitles = ["Öğrenci Bilgileri", "Staj Yapılacak Kurum/Kuruluşun Bilgileri:", "İmza"];
 
     const PageDisplay = () => {
         if (page === 0) {

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid } from '@mui/material'
 import { FormInput, MultilineInput, MultilineInput1} from './common/Input'
+import FileUpload from './common/FileUpload'
 
 const StajKurumu = ({ formData, setFormData }) => {
     return (
@@ -38,7 +39,7 @@ const StajKurumu = ({ formData, setFormData }) => {
             </Grid>
             <Grid item xs={6}>
                 <FormInput
-                    type='text'
+                    type='number'
                     placeholder='Kurumda/İşletmede çalışan toplam personel sayısı'
                     value={formData.corporationworkercount}
                     onChange={(e) => {
@@ -48,7 +49,7 @@ const StajKurumu = ({ formData, setFormData }) => {
             </Grid>
             <Grid item xs={5.85}>
                 <FormInput
-                    type='text'
+                    type='number'
                     placeholder='(Gerçek kişilik ise) TC no'
                     value={formData.corporationpersonalitytcno}
                     onChange={(e) => {
@@ -127,16 +128,13 @@ const StajKurumu = ({ formData, setFormData }) => {
                     }}
                 />
             </Grid>
-            <Grid item xs={12}>
-                <MultilineInput
-                    type='number'
-                    placeholder='İş veren onayı (Kaşe/İmza/Tarih)'
-                    value={formData.corporationshef}
-                    onChange={(e) => {
-                        setFormData({ ...formData, corporationshef: e.target.value });
-                    }}
+            <Grid item xs={4}/>
+            <Grid item xs={4}>
+                <FileUpload
+                header="İş veren onayı (Kaşe/İmza/Tarih)"
                 />
             </Grid>
+            <Grid item xs={4}/>
         </>
     )
 }

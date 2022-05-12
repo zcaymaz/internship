@@ -80,7 +80,7 @@ body {
     line-height: 19px !important;
     color: #000 !important;
     border-radius: 10px;
-    width: 50%;
+    width: 30%;
 }
 
 .progressbar {
@@ -113,7 +113,7 @@ body {
     font-size: 16px !important;
     font-family: montserrat, arial, verdana !important;
     font-weight: 700 !important;
-    text-align: left;
+    text-align: center;
 }
 
 .file-upload-drag-drop {

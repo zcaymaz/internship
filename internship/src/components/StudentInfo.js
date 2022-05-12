@@ -1,8 +1,7 @@
 import React from 'react'
-import { Grid, Box } from '@mui/material'
+import { Grid } from '@mui/material'
 import { FormInput } from './common/Input'
-import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
-import FileUploadDragDrop from './common/FileUploadDragDrop'
+import FileUpload from './common/FileUpload'
 
 const StudentInfo = ({ formData, setFormData }) => {
     function handleChange(event) {
@@ -16,14 +15,15 @@ const StudentInfo = ({ formData, setFormData }) => {
     }
     return (
         <>
-            <Grid item xs={12}>
+            <Grid item xs={4} />
+            <Grid item xs={4}>
                 <center>
-                    <FileUploadDragDrop
-                        title="Ekle"
-                        description="Selamlar"
+                    <FileUpload
+                        header="Öğrenci Fotoğrafı"
                     />
                 </center>
             </Grid>
+            <Grid item xs={4} />
             <Grid item xs={12} sm={6}>
                 <FormInput
                     type='text'
