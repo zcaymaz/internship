@@ -1,30 +1,112 @@
 const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
-    name: {
+    studentname: {
         type: String,
         required: true,
         trim: true
     },
-    email: {
+    studentsurname: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    studentno: {
+        type: String,
+        required: true,
+        trim: true,
+        unique: true
+    },
+    studentdepartment: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    studentclass: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    studenttcno: {
+        type: String,
+        required: true,
+        trim: true,
+        unique: true
+    },
+    studentmail: {
         type: String,
         required: true,
         unique: true
     },
-    password: {
+    studentgsmno: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
-    role: {
-        type: Number,
-        default: 0
+    staj: {
+        type: String,
+        required: true,
     },
-    cart: {
-        type: Array,
-        default: []
-    }
-}, {
-    timestamps: true
-})
+    corporationname: {
+        type: String,
+        required: true,
+    },
+    corporationaddress: {
+        type: String,
+        required: true,
+    },
+    corporationproduction: {
+        type: String,
+        required: true,
+    },
+    corporationworkercount: {
+        type: String,
+        required: true,
+    },
+    corporationpersonalitytcno: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    corporationgsmno: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    corporationfax: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    corporationtaxno: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    corporationtaxdepartment: {
+        type: String,
+        required: true,
+    },
+    corporationauthorizedperson: {
+        type: String,
+        required: true,
+    },
+    corporationwebaddress: {
+        type: String,
+        required: true,
+    },
+    corporationmail: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    corporationshef: {
+        type: String,
+        required: true,
+    },
+},
+    {
+        timestamps: true
+    })
 
 module.exports = mongoose.model('Users', userSchema)
