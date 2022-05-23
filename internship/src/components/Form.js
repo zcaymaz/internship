@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Grid, Typography } from '@mui/material'
+import { Box, Grid, Link, Typography } from '@mui/material'
 import StudentInfo from "./StudentInfo";
 import StajKurumu from "./StajKurumu";
 import Signature from "./Signature";
@@ -15,7 +15,7 @@ const Form = () => {
         studenttcno: "",
         studentmail: "",
         studentgsmno: "",
-        staj:"",
+        staj: "",
         corporationname: "",
         corporationaddress: "",
         corporationproduction: "",
@@ -43,8 +43,11 @@ const Form = () => {
         }
     };
     return (
-        <>
-            <Box sx={{width:{xs:'95%',sm:'85%',md:'80%',lg:'60%'}}} className='FormCard'>
+        <div className="App">
+            <Link href={'/teacher'}>
+                <img alt="..." src={require('../images/ktun-logo.png')} />
+            </Link>
+            <Box sx={{ width: { xs: '95%', sm: '85%', md: '80%', lg: '60%' } }} className='FormCard'>
                 <Grid container spacing={2} padding={2} direction='row'>
                     <Grid item xs={12} >
                         <div className="progressbar">
@@ -73,7 +76,7 @@ const Form = () => {
                         <button
                             onClick={() => {
                                 if (page === FormTitles.length - 1) {
-                                    alert("FORM SUBMITTED");
+                                    alert("Form Yollandı");
                                     console.log(formData);
                                 } else {
                                     setPage((currPage) => currPage + 1);
@@ -85,7 +88,7 @@ const Form = () => {
                     </Grid>
                 </Grid>
             </Box>
-        </>
+        </div>
     )
 }
 

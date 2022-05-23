@@ -1,16 +1,20 @@
-import { CardMedia, Grid } from '@mui/material'
-import React from 'react'
+import React, { Suspense } from 'react'
+import { BrowserRouter as HashRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import Form from './components/Form'
+
+const Home = React.lazy(() => import('./components/Form'))
+const Teacher = React.lazy(() => import('./pages/Teacher'))
 
 const App = () => {
   return (
-    <div className='App'>
-      <Grid>
-        <img style={{position:'relative'}} src={require('./images/ktun-logo.png')} />
-      </Grid>
-      <Form />
-    </div>
+    <HashRouter>
+      <Suspense>
+        <Routes>
+          <Route exact path="*" name="Home Page" element={<Home />} />
+          <Route exact path="/teacher" name="Teacher Page" element={<Teacher />} />
+        </Routes>
+      </Suspense>
+    </HashRouter>
   )
 }
 

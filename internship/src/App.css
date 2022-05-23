@@ -2,10 +2,6 @@
 
 .App {
     background: rgb(177, 73, 73);
-    /* background: radial-gradient(circle,
-            rgb(0, 0, 0) 29%,
-            rgb(255, 255, 255) 54%,
-            rgb(255, 0, 0) 100%); */
     width: 100%;
     min-height: 100vh;
     place-items: center;
@@ -126,4 +122,51 @@ body {
     min-height: 250px;
     cursor: pointer;
     max-width: 250px;
+}
+
+.NavbarContainer {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 25%, rgba(4, 4, 134, 1) 77%, rgb(3, 9, 172) 100%);
+}
+
+.NavbarLogo {
+    width: 180px;
+}
+
+.navbarButton {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    font-family: Mulish !important;
+    color: white;
+    text-decoration: none;
+}
+
+.menuItemText {
+    font-family: Mulish !important;
+    text-transform: uppercase;
+    font-size: 18px !important;
+}
+
+.menuItemLink {
+    text-decoration: none !important;
+    color: #67696f !important;
+}
+
+.NavbarDivider {
+    width: 70%;
+}
+
+.submissionTableViewButtonText {
+    font-family: Mulish !important;
+    font-size: 16px;
+    font-weight: 600!important;
+    line-height: 20px;
+    text-align: center;
+    color: rgb(0, 81, 255);
+    text-transform: capitalize;
+    text-decoration: none !important;
+}
+
+.submissionTableViewButton {
+    text-decoration: none !important;
+    
 }
