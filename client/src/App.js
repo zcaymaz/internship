@@ -4,6 +4,7 @@ import './App.css'
 
 const Home = React.lazy(() => import('./components/Form'))
 const Teacher = React.lazy(() => import('./pages/Teacher'))
+const Deneme = React.lazy(() => import('./pages/Deneme'))
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Routes>
           <Route exact path="*" name="Home Page" element={<Home />} />
           <Route exact path="/teacher" name="Teacher Page" element={<Teacher />} />
+          <Route exact path="/deneme" name="Deneme Page" element={<Deneme />} />
         </Routes>
       </Suspense>
     </HashRouter>
